@@ -1,17 +1,16 @@
-import 'package:flutter/material.dart';
-
 class Questao {
-  String pergunta;
-  bool resposta;
-  bool _ativa = true;
-  Questao({@required this.pergunta, this.resposta = false});
+  String? pergunta;
+  bool? verdadeiroFalso;
+  late bool _resposta;
 
-  set ativa(bool novo) => this._ativa = novo;
+  Questao({required this.pergunta, required this.verdadeiroFalso});
 
-  bool get ativa => _ativa;
+  void setResposta(bool resposta) => _resposta = resposta;
+
+  bool getResposta() => _resposta;
 
   @override
   String toString() {
-    return '$pergunta: ${resposta ? 'Verdeiro' : 'Falso'}';
+    return '$pergunta $verdadeiroFalso';
   }
 }

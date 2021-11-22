@@ -1,4 +1,4 @@
-# flutter_application
+# estudo_flutter_basico
 
 A new Flutter project.
 
